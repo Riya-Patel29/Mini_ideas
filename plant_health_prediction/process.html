@@ -1,92 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Process</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+      body {
+        font-family: Arial, sans-serif;
+      }
 
-        .header {
-            background-color: #4CAF50;
-            padding: 1rem;
-            text-align: center;
+      .header {
+        background-color: #4caf50;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        /* background-color: #fff; */
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Process</h1>
+    </div>
+    <div style="background: url(BG2\ process.webp); height: 15rem">
+      <div style="display: flex; gap: 60rem">
+        <a
+          href="library.html"
+          class="back-button"
+          style="
+            display: flex;
             font-size: 1rem;
             font-family: Georgia, 'Times New Roman', Times, serif;
-        }
+            background-color: white;
+            color: black;
+            border-radius: 0.2rem;
+            height: 20px;
+            width: 210px;
+            text-align: center;
+            justify-content: center;
+            border-style: solid;
+            border-color: black;
+          "
+        >
+          ← Back to Library</a
+        >
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            /* background-color: #fff; */
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        <a
+          href="aboutus.html"
+          class="next-button"
+          style="
+            display: flex;
+            font-size: 1rem;
             font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .button:hover {
-            background-color: #3e8e41;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="header">
-        <h1>Process</h1>
-    </div>
-    <div style="background: url(BG2\ process.webp); height: 15rem;">
-        <div style="display: flex; gap:60rem;">
-            <a href="library.html" class="back-button" style=" display: flex;
-        font-size: 1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        background-color: white;
-        color: black;
-        border-radius: 0.2rem;
-        height: 20px;
-        width: 210px;
-        text-align: center;
-        justify-content: center;
-        border-style:solid;
-        border-color: black;"> ← Back to Library</a>
-
-            <a href="aboutus.html" class="next-button" style=" display: flex;
-        font-size: 1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        background-color: white;
-        color: black;
-        border-radius: 0.2rem;
-        height: 20px;
-        width: 180px;
-        text-align: center;
-        justify-content: center;
-        border-style:solid;
-        border-color: black;">Next → </a>
-        </div>
-        <div class="container" style="background: url(BI\ -\ leaves.jpeg);;">
-            <h2>Upload Image</h2>
-            <form id="image-form">
-                <input id="imageupload"   type="file" "image-input" accept="image/*">
-                <button class="button" id="submit-button">Submit</button>
-            </form>
-        </div>
+            background-color: white;
+            color: black;
+            border-radius: 0.2rem;
+            height: 20px;
+            width: 180px;
+            text-align: center;
+            justify-content: center;
+            border-style: solid;
+            border-color: black;
+          "
+          >Next →
+        </a>
+      </div>
+      <div class="container" style="background: url(BI\ -\ leaves.jpeg)">
+        <h2>Upload Image</h2>
+        <form id="image-form">
+          <input
+            id="imageupload"
+            type="file"
+            class="image-input"
+            accept="image/*"
+          />
+          <button class="button" id="submit-button">Submit</button>
+        </form>
+      </div>
     </div>
 
-    <script src="process.js">
-    </script>
-</body>
+    <div class="result">
+      <p id="prediction-text"></p>
+      <p id="confidence-text"></p>
+    </div>
 
+    <script type="module" src="process.js"></script>
+  </body>
 </html>
